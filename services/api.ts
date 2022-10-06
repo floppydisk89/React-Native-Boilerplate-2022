@@ -1,6 +1,6 @@
 import axios from 'axios';
 import host from '../data/host';
-import config from '../config';
+import config from '../config/host';
 
 const api = axios.create({
   baseURL: `${
