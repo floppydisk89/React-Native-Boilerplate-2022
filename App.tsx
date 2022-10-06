@@ -1,4 +1,4 @@
-import Root from './views/Root';
+import Root from './views/Main';
 
 export default function App() {
   return <Root />;

@@ -34,5 +34,8 @@
     "sharp-cli": "^2.1.0",
     "typescript": "~4.3.5"
   },
+  "resolutions": {
+    "styled-components": "^5"
+  },
   "private": true
 }
