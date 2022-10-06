@@ -19,6 +19,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@expo/webpack-config": "^0.17.0",
+    "@testing-library/react-native": "^11.2.0",
     "@types/react": "~18.0.14",
     "@types/react-native": "~0.69.1",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
