@@ -3,16 +3,12 @@ import enUS from '../../locales/en-us';
 import nlNL from '../../locales/nl-nl';
 import ptPT from '../../locales/pt-pt';
 
-type JSONValue = string | number | boolean | JSONObject | JSONArray;
-
-interface JSONObject {
-  [x: string]: JSONValue;
-}
-
-interface JSONArray extends Array<JSONValue> {}
+type JSONValue = {
+  [x: string]: string;
+};
 
 export function useLocale() {
-  return (copy: string): string | JSONValue => {
+  return (copy: string): string => {
     const locale = Localization.locale;
 
     let selectedLocaleContent: JSONValue = {};
