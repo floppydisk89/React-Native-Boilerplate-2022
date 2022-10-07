@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import { Text, View, TouchableOpacity } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -34,7 +33,6 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>This is where everything starts</Text>
-      <LottieCustom />
       <Text>
         Counter:
         {userSession.count}
@@ -48,7 +46,7 @@ export default function App() {
       <TouchableOpacity onPress={() => resetCounter()}>
         <Text>Reset counter</Text>
       </TouchableOpacity>
-      <StatusBar style="auto" />
+      <LottieCustom />
     </View>
   );
 }
