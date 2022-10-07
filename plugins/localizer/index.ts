@@ -8,7 +8,7 @@ type JSONValue = {
 };
 
 export function useLocale() {
-  return (copy: string): string => {
+  return (copyId: string) => {
     const locale = Localization.locale;
 
     let selectedLocaleContent: JSONValue = {};
@@ -27,6 +27,6 @@ export function useLocale() {
         break;
     }
 
-    return selectedLocaleContent[copy];
+    return selectedLocaleContent[copyId];
   };
 }
