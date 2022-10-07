@@ -12,9 +12,9 @@ interface JSONObject {
 interface JSONArray extends Array<JSONValue> {}
 
 export function useLocale() {
-  return (copy: string): string => {
+  return (copy: string): string | JSONValue => {
     const locale = Localization.locale;
-    console.log(locale);
+
     let selectedLocaleContent: JSONValue = {};
     switch (locale) {
       case 'en-GB':
