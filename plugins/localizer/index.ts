@@ -1,7 +1,7 @@
 import * as Localization from 'expo-localization';
-import enUS from '../../locales/en-us';
-import nlNL from '../../locales/nl-nl';
-import ptPT from '../../locales/pt-pt';
+import enUS from '../../locales/en-us/locale.json';
+import nlNL from '../../locales/nl-nl/locale.json';
+import ptPT from '../../locales/pt-pt/locale.json';
 
 type JSONValue = {
   [x: string]: string;
