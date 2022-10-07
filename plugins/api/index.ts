@@ -1,5 +1,5 @@
 import axios from 'axios';
-import config from '../config/host';
+import config from '../../config/host';
 
 const api = axios.create({
   baseURL: `${
