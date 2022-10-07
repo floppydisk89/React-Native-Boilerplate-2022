@@ -6,6 +6,7 @@ import {
   increment,
 } from '../../store/slices/userSession';
 import LottieCustom from '../../components/LottieCustom';
+import { useLocale } from '../../plugins/localizer';
 import styles from './styles';
 
 type State = {
@@ -16,6 +17,7 @@ type State = {
 
 export default function App() {
   const dispatch = useDispatch();
+  const t = useLocale();
   const userSession = useSelector((state: State) => state.userSession);
 
   function sendIncrement() {
@@ -32,7 +34,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>This is where everything starts</Text>
+      <Text>{t('hello')} This is where everything starts</Text>
       <Text>
         Counter:
         {userSession.count}
