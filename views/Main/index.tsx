@@ -6,7 +6,7 @@ import {
   decrement,
   increment,
 } from '../../store/slices/userSession';
-import LottieCustom from '../../components/Lottie';
+import LottieCustom from '../../components/LottieCustom';
 import styles from './styles';
 
 type State = {
@@ -34,6 +34,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>This is where everything starts</Text>
+      <LottieCustom />
       <Text>
         Counter:
         {userSession.count}
@@ -48,7 +49,6 @@ export default function App() {
         <Text>Reset counter</Text>
       </TouchableOpacity>
       <StatusBar style="auto" />
-      <LottieCustom />
     </View>
   );
 }
