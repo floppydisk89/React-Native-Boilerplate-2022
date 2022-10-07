@@ -12,7 +12,7 @@ interface JSONObject {
 interface JSONArray extends Array<JSONValue> {}
 
 export function useLocale() {
-  return (copy: string) => {
+  return (copy: string): string => {
     const locale = Localization.locale;
     console.log(locale);
     let selectedLocaleContent: JSONValue = {};
