@@ -7,7 +7,7 @@ export default function LottieCustom() {
   return (
     <>
       {Platform.OS === 'web' ? (
-        <Text>Not supported.</Text>
+        <Text>Lottie not supported in web.</Text>
       ) : (
         <Lottie source={animation} autoPlay />
       )}
