@@ -10,7 +10,11 @@ const Stack = createNativeStackNavigator();
 function Routes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="About" component={About} />
       </Stack.Navigator>
@@ -19,3 +23,8 @@ function Routes() {
 }
 
 export default Routes;
+
+export type RootStackParamList = {
+  Home: undefined;
+  About: undefined;
+};

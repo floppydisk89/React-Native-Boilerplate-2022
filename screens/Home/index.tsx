@@ -1,5 +1,7 @@
 import { Text, View, TouchableOpacity } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../routes';
 import {
   clearState,
   decrement,
@@ -7,6 +9,7 @@ import {
 } from '../../store/slices/userSession';
 import LottieCustom from '../../components/LottieCustom';
 import { useLocale } from '../../plugins/localizer';
+
 import styles from './styles';
 
 type State = {
@@ -15,7 +18,9 @@ type State = {
   };
 };
 
-export default function App() {
+export default function Home({
+  navigation,
+}: NativeStackScreenProps<RootStackParamList>) {
   const dispatch = useDispatch();
   const t = useLocale();
   const userSession = useSelector((state: State) => state.userSession);
@@ -49,6 +54,10 @@ export default function App() {
         <Text>Reset counter</Text>
       </TouchableOpacity>
       <LottieCustom />
+
+      <TouchableOpacity onPress={() => navigation.navigate('About')}>
+        <Text>Navigate About</Text>
+      </TouchableOpacity>
     </View>
   );
 }
