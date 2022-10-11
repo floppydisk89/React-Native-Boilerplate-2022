@@ -1,13 +1,13 @@
 import { Provider } from 'react-redux';
 import { StatusBar } from 'expo-status-bar';
-import Root from './views/Main';
+import Routes from './screens/routes';
 import store from './store';
 
 export default function App() {
   return (
     <Provider store={store}>
       <StatusBar style="auto" />
-      <Root />
+      <Routes />
     </Provider>
   );
 }

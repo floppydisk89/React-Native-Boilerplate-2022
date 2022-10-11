@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react-native';
-import Root from '../views/Main';
+import Root from '../screens/Home';
 
 it('renders', () => {
   render(<Root />);
